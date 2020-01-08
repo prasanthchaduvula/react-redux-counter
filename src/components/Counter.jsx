@@ -13,7 +13,7 @@ class Counter extends React.Component {
     let { count, step, max, dispatch } = this.props;
     return (
       <div className="wrapper">
-        <h1 className="counter">count</h1>
+        <h1 className="counter">{`count by ${step} and max up to ${max}`}</h1>
         <div className="counterValue-div">
           <h2 className="counterValue">{count}</h2>
         </div>
@@ -28,6 +28,7 @@ class Counter extends React.Component {
             Reset
           </button>
         </div>
+        <p className="text">STEP</p>
         <div className="btn-wrapper2">
           {[5, 8, 10, 12, 14, 16].map(e => (
             <button
@@ -38,6 +39,7 @@ class Counter extends React.Component {
             </button>
           ))}
         </div>
+        <p className="text">MAX</p>
         <div className="btn-wrapper2">
           {[50, 100, 150, 200, 250, 300].map(e => (
             <button
